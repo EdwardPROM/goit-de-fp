@@ -103,7 +103,7 @@ data_from_kafka = (
         "kafka.sasl.jaas.config",
         'org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="VawEzo1ikLtrA8Ug8THa";',
     )
-    .option("subscribe", "edwardprom_athlete_event_result")
+    .option("subscribe", "edwardprom_athlete_event_results")
     .option("startingOffsets", "earliest")
     .option("maxOffsetsPerTrigger", "5")
     .option("failOnDataLoss", "false")

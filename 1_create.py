@@ -31,9 +31,9 @@ aggregated_athlete_stats = NewTopic(
 # Видалення старих топіків
 try:
     admin_client.delete_topics(topics=[athlete_event_results, aggregated_athlete_stats])
-    print(f"Topic '{topic}' deleted successfully.")
+    print(f"Topic deleted successfully.")
 except Exception as e:
-    print(f"Failed to delete topic '{topic}': {e}")
+    print(f"Failed to delete topic: {e}")
 
 # Створення нових топіків
 try:
@@ -41,8 +41,8 @@ try:
         new_topics=[athlete_event_results, aggregated_athlete_stats],
         validate_only=False,
     )
-    print(f"Topic '{athlete_event_results}' created successfully.")
-    print(f"Topic '{aggregated_athlete_stats}' created successfully.")
+    print(f"Topic {athlete_event_results} created successfully.")
+    print(f"Topic {aggregated_athlete_stats} created successfully.")
 except Exception as e:
     print(f"An error occurred: {e}")
 
